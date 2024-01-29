@@ -5,13 +5,11 @@ test git operate
 299
 
 append useradd
-<<<<<<< HEAD
 
 
 hotfix command
-=======
 b hotfix
->>>>>>> dragon
 
 
 tttttt
+ooob hotfix
