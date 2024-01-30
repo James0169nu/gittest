@@ -14,7 +14,7 @@ jobs:
       - name: use python3.x
         uses: actions/setup-python3x@v2
         with:
-          python-version: '3.9'
+          python-version: '3.10'
       - name: install python packeg
         run: |
           pip3 install pandas
