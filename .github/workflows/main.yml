@@ -1,0 +1,20 @@
+name: test_CI
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check
+        uses: actions/checkout@v4
+      - name: use python3.x
+        uses: actions/setup-python3x@v2
+          with:
+            python-version: '3.x'
+      - name: install python packeg
+        run: |
+          pip3 install pandas
+          python3 insert.py
