@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Check
         uses: actions/checkout@v4
+
       - name: set up python3.9
         uses: actions/setup-python@v5
         with:
@@ -22,6 +23,7 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
+          cache-dependency-path: '__tests__/data'
       - run: npm install
       - run: npm test
 
