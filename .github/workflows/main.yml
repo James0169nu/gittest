@@ -15,5 +15,5 @@ jobs:
         with:
           python-version: '3.9'
       - run: python insert.py
-      - run: pip3 install pandas
+      - run: pip3 install pandas --root-user-action=ignore requests
 
