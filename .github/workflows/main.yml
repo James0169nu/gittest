@@ -17,6 +17,15 @@ jobs:
       - run: python insert.py
       - run: pip3 install pandas --root-user-action=ignore requests
 
+      - name: node install
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - run: npm install
+      - run: npm test
+
+
   install:
     needs: build
     runs-on: ubuntu-latest
@@ -27,13 +36,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: node install
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-      - run: npm install
-      - run: npm test
 
       - name: Cypress install
         uses: cypress-io/github-action@v5
