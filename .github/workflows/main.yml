@@ -17,3 +17,27 @@ jobs:
       - run: python insert.py
       - run: pip3 install pandas --root-user-action=ignore requests
 
+  install:
+    runs-on: ubuntu-latest
+    container:
+      image: cypress/browsers:node-18.16.1-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1
+      options: --user 1001
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Cypress install
+        uses: cypress-io/github-action@v5
+        with:
+          runTests: false
+      # report machine parameters
+      - run: yarn cypress info
+      - run: node --version
+      - run: node -p 'os.cpus()'
+
+      - name: Save build folder
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          if-no-files-found: error
+          path: build
