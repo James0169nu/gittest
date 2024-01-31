@@ -12,10 +12,8 @@ jobs:
       - name: Check
         uses: actions/checkout@v4
       - name: set up python3.9
-        uses: actions/setup-python3@v3
+        uses: actions/setup-python@5
         with:
           python-version: '3.9'
-      - name: install python packeg
-        run: |
-          pip3 install pandas
-          python3 insert.py
+      -run: pip3 install pandas
+
