@@ -24,4 +24,4 @@ jobs:
           cache: 'npm'
       - run: npm install
       - run: npm test
-      - run: echo "main done." :rocket: >> $GITHUB_STEP_SUMMARY
+      - run: echo "main done. :rocket:" >> $GITHUB_STEP_SUMMARY
