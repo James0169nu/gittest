@@ -1,0 +1,19 @@
+{
+  "name": "james",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo hi this is npm package.json\""
+  },
+  "keywords": [
+    "\"npm\"",
+    "\"node\""
+  ],
+  "author": "james",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "4.7.4",
+    "express": "4.18.2"
+  }
+}
