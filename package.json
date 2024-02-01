@@ -4,7 +4,7 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "test": "\"echo hi this is npm package.json\""
+    "test": "echo \"hi this is npm package.json\""
   },
   "keywords": [
     "\"npm\"",
